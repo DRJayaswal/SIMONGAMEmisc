@@ -45,11 +45,24 @@ const enableInput = () => {
             console.log(user_sequence);
             // If user sequence length equals game sequence length, check the sequence
             if (user_sequence.length === game_sequence.length) {
+                reveal();
                 checkSequence();
             }
         });
     });
 };
+// Function to reveal sequence at the end
+function reveal() {
+    let revealContent = "";
+    for (let i = 0; i < game_sequence.length - 1; i++) {
+        revealContent += game_sequence[i] + " - ";
+    }
+    // Add the last element without comma
+    revealContent += game_sequence[game_sequence.length - 1];
+    
+    document.querySelector(".reveal").innerHTML = revealContent;
+}
+
 
 // Function to check if user sequence matches game sequence
 const checkSequence = () => {
@@ -75,7 +88,7 @@ const reverb = () => {
 // Function to start the game
 const startGame = () => {
     // Generate a level game
-    const level = prompt("Level...?");
+    const level = prompt("Level");
     document.querySelector(".level").innerHTML+=level;
     generateSequence(level);
     console.log(game_sequence);
