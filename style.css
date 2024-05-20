@@ -1,0 +1,94 @@
+/* Set the background color of the body to black */
+body {
+    background-color: black;
+}
+.level{
+    color: white;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 500%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 0px;
+    text-align: center;
+
+}
+/* Styling for the container holding the colored boxes */
+.container {
+    /* Set background color to white */
+    background-color: white;
+    /* Use flexbox for layout */
+    display: flex;
+    /* Allow flex items to wrap to the next line if necessary */
+    flex-wrap: wrap;
+    /* Set width and height of the container */
+    width: 500px;
+    height: 500px;
+    /* Center the container horizontally and vertically */
+    margin-top: calc(320px/2) - 50px;
+    margin-left: calc(947px/2);
+    margin-right: calc(947px/2);
+    margin-bottom: calc(320px/2);
+    /* margin: calc(320px/2) calc(947px/2) calc(320px/2 - 50px) calc(947px/2); */
+}
+
+/* Styling for each box containing a colored square */
+.box {
+    /* Make each box grow and shrink with flexbox */
+    flex: 1 0 50%;
+}
+
+/* Styling for the colored squares */
+.colors {
+    /* Set width and height to 100% of parent container */
+    width: 100%;
+    height: 100%;
+}
+
+/* Specific styling for the red square */
+#red {
+    /* Set background color to red */
+    background-color: red;
+}
+
+/* Darken the red square on hover */
+#red:hover {
+    background-color: darkred;
+}
+
+/* Specific styling for the blue square */
+#blue {
+    /* Set background color to blue */
+    background-color: blue;
+}
+
+/* Darken the blue square on hover */
+#blue:hover {
+    background-color: darkblue;
+}
+
+/* Specific styling for the green square */
+#green {
+    /* Set background color to green */
+    background-color: green;
+}
+
+/* Darken the green square on hover */
+#green:hover {
+    background-color: darkgreen;
+}
+
+/* Specific styling for the khaki square */
+#khaki {
+    /* Set background color to khaki */
+    background-color: khaki;
+}
+
+/* Darken the khaki square on hover */
+#khaki:hover {
+    background-color: darkkhaki;
+}
+
+/* Change cursor to pointer on hover for all colored squares */
+.colors:hover {
+    cursor: pointer;
+}
